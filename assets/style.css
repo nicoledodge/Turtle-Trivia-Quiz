@@ -1,0 +1,87 @@
+
+#startTime {
+    background-color: rgb(37, 153, 138);
+    margin-left: 33%;
+    padding: 15px 32px;
+    font-size: 20px;
+    color: white;
+}
+#questionsDiv {
+    margin: 20px;
+}
+
+#currentTime {
+    float: right;
+}
+#container {
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    width: 400px;
+    height: 400px;
+    border: 10px solid rgb(37, 153, 138);
+}
+#goBack {
+    background-color: rgb(37, 153, 138);
+    position: relative;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    top: 30%;
+    left: 55%;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+button {
+    border-radius: 8px;
+}
+
+
+#Submit {
+    background-color: rgb(37, 153, 138);
+    margin-left: 33%;
+    padding: 15px 32px;
+    font-size: 20px;
+    color: white;
+}
+
+label {
+    margin-right: 10px;
+}
+input {
+    margin-bottom: 20px;
+    width: 50%;
+    border: 1px solid lightgray;
+}
+
+#clear {
+    background-color: rgb(37, 153, 138);
+    position: relative;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    top: 30%;
+    right: 5%;
+    text-align: center;
+}
+h1 {
+    text-align: center;
+}
+
+li {
+    background-color: rgb(37, 153, 138);
+    margin-top: 10px;
+    padding: 5px 15px;
+    width: 80%;
+    font-size: 18px;
+    color: white;
+}
+
+#createDiv {
+    margin-top: 20px;
+    border-top: 1px solid lightgray;
+}
