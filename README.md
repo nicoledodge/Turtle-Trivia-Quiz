@@ -6,7 +6,7 @@ This is a quiz created mainly of Javascript, HTML and CSS components. The applic
 
 The webpage starts at 30 seconds and counts down, confirming you on the correct answer after every question is answered.
 
-![Preview](/Users/nicoledodge/Repos - Bootcamp/Assignment-4/Assignment-4/assets/images/Demo Turtle Quiz.gif)
+![Preview](https://github.com/nicoledodge/Assignment-4/blob/main/assets/images/Demo%20Turtle%20Quiz.gif)
 
 Turtle facts-
 https://conserveturtles.org/wp-content/uploads/HP_SeaTurtleQuizAnswers.pdf
