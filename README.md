@@ -16,7 +16,7 @@ Once given highscore, prompted to write in initials for seperate highscore HTML 
 
 Go back button returns user to to initial Start Quiz button page.
 
-![Preview](./Assignment-4/assets/images/turtle quiz demo.gif)
+![Preview](https://github.com/nicoledodge/Assignment-4/blob/main/assets/images/turtle%20quiz%20demo.gif?raw=true)
 
 Turtle facts-
 https://conserveturtles.org/wp-content/uploads/HP_SeaTurtleQuizAnswers.pdf
