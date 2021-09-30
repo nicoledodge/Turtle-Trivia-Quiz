@@ -6,22 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/style.css">
-
+    <link rel="icon" type="image/x-icon" href="Assignment-4/assets/images/favicon.ico">
     <title>Turtle Quiz</title>
 </head>
 
 <nav>
-    <a href="HighScores.html">View Highscores</a>
+    <button id="HSlinkpage">View Highscores</button>
 </nav>
 <body>
-    <div id="container">
-    <div id="currentTime"></div>
-    <div id="questionsDiv">
+    <div id="questionsPage" class="container">
+        <div id="currentTime"></div>
+        <div id="questionsDiv">
         <h1>Turtle Trivia Challenge</h1>
         <p>Answer these turtle-related questions in the time limit.</p>
         <ul class="createList"></ul>
         <button id="startTime">Start Quiz</button>
+        </div>
     </div>
+    <div id="highscorePage" class="container" style="display: none;">
+        <div id="currentTime"></div>
+        <div id="questionsDiv">
+            <h1>Highscores</h1>
+            <ul id="highScore"></ul>
+            <button id="goBack">Go Back</button>
+            <button id="clear" value="reset">Clear Highscore</button>
+        </div>
     </div>
     <script src="assets/js/script.js"></script>
 </body>

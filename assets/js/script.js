@@ -1,3 +1,27 @@
+var highscorePage = document.querySelector('#highscorePage');
+var questionsPage = document.querySelector('#questionsPage');
+
+document.getElementById("HSlinkpage").addEventListener("click", ()=>{
+
+    questionsPage.style.display = 'none';
+
+    highscorePage.style.display = 'block';
+
+    //clears scores
+    clear.addEventListener("click", function() {
+
+        localStorage.clear();
+
+        highScore.innerHTML = null;
+
+    });
+    //go back button
+    goBack.addEventListener("click", function () {
+        window.location.replace("./index.html");
+        console.log(goBack);
+    });
+});
+
 var questions = [
     {
         title: "This turtle gets its name because of its exceptionally large head:",
@@ -148,13 +172,13 @@ function allDone() {
 
         questionsDiv.appendChild(createP2);
     }
-
+    //text
     var createLabel = document.createElement("label");
     createLabel.setAttribute("id", "createLabel");
     createLabel.textContent = "Enter your initials: ";
 
     questionsDiv.appendChild(createLabel);
-
+    //declares the input space of initials, starts empty
     var createInitial = document.createElement("input");
     createInitial.setAttribute("type", "text");
     createInitial.setAttribute("id", "initials");
@@ -162,7 +186,7 @@ function allDone() {
 
     questionsDiv.appendChild(createInitial);
 
-    // submit
+    // create submit button
     var createSubmit = document.createElement("button");
     createSubmit.setAttribute("type", "submit");
     createSubmit.setAttribute("id", "Submit");
@@ -172,10 +196,11 @@ function allDone() {
 
     createSubmit.addEventListener("click", function () {
         var initials = createInitial.value;
-
-        if (initials === null) {
-
+        //no empty inputs will be valid
+        if (initials === " ") {
+            alert("No value entered!");
             console.log("No value entered!");
+            // initials.textContent= "No value entered!";
 
         } else {
             var finalScore = {
@@ -189,12 +214,59 @@ function allDone() {
             } else {
                 allScores = JSON.parse(allScores);
             }
-            allScores.push(finalScore);
-            var newScore = JSON.stringify(allScores);
-            localStorage.setItem("allScores", newScore);
-            // takes to highscores page
-            window.location.replace("./highscores.html");
-        }
-    });
 
+            allScores.push(finalScore);
+
+
+            var newScore = JSON.stringify(allScores);
+
+            localStorage.setItem("allScores", newScore);
+            // var questionsPage = document.querySelector('#questionsPage');
+            questionsPage.style.display = 'none';
+        }
+        // var highscorePage = document.querySelector('#highscorePage');
+
+        highscorePage.style.display = 'block';
+
+        var highScore = document.querySelector("#highScore");
+
+        var clear = document.querySelector("#clear");
+
+        var goBack = document.querySelector("#goBack");
+
+
+
+        var allScores = localStorage.getItem("allScores");
+
+        allScores = JSON.parse(allScores);
+
+        if (allScores !== null) {
+
+            for (var i = 0; i < allScores.length; i++) {
+
+                var createLi = document.createElement("li");
+                createLi.textContent = allScores[i].initials + " " + allScores[i].score;
+                highScore.appendChild(createLi);
+
+            }
+        }
+
+        //clears scores
+        clear.addEventListener("click", function() {
+
+            localStorage.clear();
+
+            highScore.innerHTML = null;
+
+        });
+
+        goBack.addEventListener("click", function () {
+            window.location.replace("./index.html");
+            console.log(goBack);
+        });
+
+    });
 }
+
+
+
