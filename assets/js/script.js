@@ -61,6 +61,7 @@ var currentTime = document.querySelector("#currentTime"),
 
 var secondsLeft = 30;
 var holdInterval = 0;
+var penalty = 5;
 var createList = document.createElement("ul");
 
 timer.addEventListener("click", function() {
@@ -132,6 +133,8 @@ function compare(event) {
  
         } else {
  
+            secondsLeft = secondsLeft - penalty;
+
             createDiv.textContent = "Wrong! The correct answer is:  " + questions[questionIndex].answer;
             console.log();
         }
@@ -197,11 +200,9 @@ function allDone() {
     createSubmit.addEventListener("click", function () {
         var initials = createInitial.value;
         //no empty inputs will be valid
-        if (initials === " ") {
+        if (initials == '') {
             alert("No value entered!");
-            console.log("No value entered!");
-            // initials.textContent= "No value entered!";
-
+            return;
         } else {
             var finalScore = {
                 initials: initials,
